@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fibonacci Series</title>
+</head>
+<body>
+    <script>
+    
+        function FibonacciSeries(limit) 
+        {
+            let fibSeries = [];
+            let a = 0, b = 1;
+
+            while (a <= limit) 
+            {
+                fibSeries.push(a);
+                const nextTerm = a + b;
+                a = b;
+                b = nextTerm;
+            }
+
+            return fibSeries;
+        }
+
+        const limit = 50;
+
+        
+        const fibonacciSeries = FibonacciSeries(limit);
+        console.log(`Fibonacci Series up to ${limit}: ${fibonacciSeries.join(', ')}`);
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Even Numbers</title>
+</head>
+<body>
+    <script>
+        
+        function printEvenNumbers(limit) {
+            if (limit < 0) {
+            
+                return;
+            }
+
+            console.log("Even numbers up to " + limit + ":");
+            for (let i = 2; i <= limit; i += 2) {
+                console.log(i);
+            }
+        }
+
+        const limit = 10;
+        printEvenNumbers(limit);
+    </script>
+</body>
+</html>

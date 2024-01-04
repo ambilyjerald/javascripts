@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulb Program</title>
+    <style>
+        #bulb {
+            width: 100px;
+            height: 100px;
+            background-color: rgb(232, 223, 223);
+            border-radius: 50%;
+            cursor: pointer;
+            margin-left: 100px;
+        }
+
+        #bulb.on {
+            background-color: rgb(235, 235, 82);
+            box-shadow: 0 0 20px 10px yellow;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="bulb" onclick="toggleBulb()"></div>
+
+    <script>
+        let isBulbOn = false;
+
+        function toggleBulb() {
+            const bulb = document.getElementById("bulb");
+
+            if (isBulbOn) {
+                bulb.classList.remove("on");
+            } else {
+                bulb.classList.add("on");
+            }
+
+            isBulbOn = !isBulbOn;
+        }
+    </script>
+
+</body>
+</html>
